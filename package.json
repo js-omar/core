@@ -1,14 +1,13 @@
 {
   "name": "@js-omar/core",
   "displayName": "Omar Javascript Core",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "my javascript core functions packages",
-  "main": "lib/main.js",
-  "types": "lib",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
     "start": "tsc --watch",
-    "build": "tsc -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "homepage": "https://github.com/js-omar/core#readme",
   "repository": {
