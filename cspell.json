@@ -1,0 +1,7 @@
+{
+  "words": ["Elsayed", "parens"],
+  "language": "ar,en",
+  "ignoreRegExpList": ["/[\\u0621-\\u064A]+/"],
+  "ignorePaths": ["node_modules"],
+  "files": ["./**/*", "./.eslintrc.json"]
+}
