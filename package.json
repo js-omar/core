@@ -1,0 +1,33 @@
+{
+  "name": "@js-omar/core",
+  "displayName": "Omar Javascript Core",
+  "version": "0.0.1",
+  "description": "my javascript core functions packages",
+  "main": "lib/main.js",
+  "types": "lib",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/js-omar/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-omar/core.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": {
+    "name": "Omar Elsayed",
+    "email": "challengeromar97@gmail.com",
+    "url": "https://ng-omar.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-omar/core/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
