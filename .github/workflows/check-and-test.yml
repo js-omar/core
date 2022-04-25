@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: Main
+name: Checking & Testing Code
 
 on:
   push:
-    branches: [master]
+    branches: [master, staging, develop]
   pull_request:
-    branches: [master]
+    branches: [master, staging, develop]
 
 jobs:
   build:
