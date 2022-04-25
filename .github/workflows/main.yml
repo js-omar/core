@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Main
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.10]
+    steps:
+      # Get checkout
+      - uses: actions/checkout@v2
+
+      # Install Node js
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      # Install Dependencies
+      - run: npm ci
+
+      # Npm Run Test
+      - run: npm run test:all
+
+      # Npm run Build
+      - run: npm run build
