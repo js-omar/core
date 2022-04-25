@@ -1,2 +1,2 @@
-export declare const greeting: () => string;
+export declare function greeting(): string;
 //# sourceMappingURL=main.d.ts.map
