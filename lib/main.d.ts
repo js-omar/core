@@ -19,6 +19,7 @@ export declare function isUnAuthorizedStatus(status: number | string): boolean;
  * Return a random integer between two numbers, inclusive.
  * @param {number | string} [no1=0] - The minimum number to return.
  * @param {number | string} [no2=1000] - The maximum number to return.
+ * @author @omar-elsayed97
  * @returns A random integer between two numbers.
  */
 export declare function randInt(no1?: number | string, no2?: number | string): number;
