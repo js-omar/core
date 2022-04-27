@@ -3,9 +3,9 @@ name: Testing Code & Build App
 
 on:
   push:
-    branches: [master, staging, develop]
+    branches: [develop]
   pull_request:
-    branches: [master, staging, develop]
+    branches: [develop]
 
 jobs:
   prepare:
