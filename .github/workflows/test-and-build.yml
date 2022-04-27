@@ -14,7 +14,7 @@ jobs:
     steps:
       # Get checkout
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       # Install Node js
       - name: Use Node.js
@@ -24,12 +24,12 @@ jobs:
 
       # Install Dependencies
       - name: Install dependencies 🔧
-      - run: npm ci
+        run: npm ci
 
       # Npm Run Test
       - name: Run Test All
-      - run: npm run test:all
+        run: npm run test:all
 
       # Build application
       - name: Run Build
-      - run: npm run build
+        run: npm run build
