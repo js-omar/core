@@ -12,6 +12,7 @@ jobs:
 
     steps:
       # Get checkout
+      - name: Checkout
       - uses: actions/checkout@v3
 
       # Install Node js
@@ -19,18 +20,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.10.0'
-          registry-url: https://registery.npmjs.org/
+          registry-url: 'https://registry.npmjs.org'
 
       # Install Dependencies
+      - name: Install dependencies 🔧
       - run: npm ci
 
       # Npm Run Test
+      - name: Run Test All
       - run: npm run test:all
 
       # Build application
+      - name: Run Build
       - run: npm run build
 
       # Build application
+      - name: Publish package on NPM 📦
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
