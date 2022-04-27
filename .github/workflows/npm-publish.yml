@@ -24,24 +24,12 @@ jobs:
       # Install Dependencies
       - run: npm ci
 
-  test:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
       # Npm Run Test
       - run: npm run test:all
 
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
       # Build application
       - run: npm run build
 
-  npm_publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       # Build application
       - run: npm publish --access public
         env:
