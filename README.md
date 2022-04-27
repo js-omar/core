@@ -13,9 +13,20 @@ npm install @js-omar/core
 ## Usage
 
 ```typescript
-import { greeting } from '@js-omar/core';
+import {
+  isUnAuthorizedStatus,
+  randInt,
+  isValidTokenFormat,
+} from '@js-omar/core';
 
-greeting(); // "core"
+console.log(isUnAuthorizedStatus(200)); // false
+console.log(isUnAuthorizedStatus(403)); // true
+
+console.log(randInt(20, 30)); // 22
+console.log(randInt(20, -30)); // 4
+
+console.log(isValidTokenFormat('21321.2323.232')); // true
+console.log(isValidTokenFormat('omar')); // false
 ```
 
 ## Development
