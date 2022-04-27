@@ -10,7 +10,7 @@
     "start": "tsc --watch",
     "prebuild": "rimraf lib",
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --ci --maxWorkers=3",
     "fix:format": "prettier --write .",
     "fix:lint": "eslint . --ext ts --ext js --fix",
     "check:types": "tsc --pretty --noEmit",

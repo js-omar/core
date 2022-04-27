@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: Checking & Testing Code
+name: Testing Code & Build App
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     branches: [master, staging, develop]
 
 jobs:
-  build:
+  prepare:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,5 +27,5 @@ jobs:
       # Npm Run Test
       - run: npm run test:all
 
-      # Npm run Build
+      # Build application
       - run: npm run build
