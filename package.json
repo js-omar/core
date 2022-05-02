@@ -1,7 +1,7 @@
 {
   "name": "@js-omar/core",
   "displayName": "Omar Javascript Core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "my javascript core functions packages",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
