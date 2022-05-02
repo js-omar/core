@@ -24,5 +24,6 @@
       "error",
       { "allowExpressions": true }
     ]
-  }
+  },
+  "ignorePatterns": ["lib", "node_modules"]
 }

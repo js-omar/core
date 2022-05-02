@@ -23,4 +23,4 @@ export declare function isUnAuthorizedStatus(status: number | string): boolean;
  * @returns A random integer between two numbers.
  */
 export declare function randInt(no1?: number | string, no2?: number | string): number;
-//# sourceMappingURL=main.d.ts.map
+//# sourceMappingURL=index.d.ts.map

@@ -1,4 +1,8 @@
-import { isUnAuthorizedStatus, isValidTokenFormat, randInt } from '../src/main';
+import {
+  isUnAuthorizedStatus,
+  isValidTokenFormat,
+  randInt,
+} from '../src/index';
 import { IValidate } from './interfaces/validate.interface';
 
 describe('Start Testing Functions', () => {
