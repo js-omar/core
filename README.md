@@ -15,18 +15,22 @@ npm install @js-omar/core
 ```typescript
 import {
   isUnAuthorizedStatus,
-  randInt,
+  getRandInt,
   isValidTokenFormat,
+  isValidSlug,
 } from '@js-omar/core';
 
 console.log(isUnAuthorizedStatus(200)); // false
 console.log(isUnAuthorizedStatus(403)); // true
 
-console.log(randInt(20, 30)); // 22
-console.log(randInt(20, -30)); // 4
+console.log(getRandInt(20, 30)); // 22
+console.log(getRandInt(20, -30)); // 4
 
 console.log(isValidTokenFormat('21321.2323.232')); // true
 console.log(isValidTokenFormat('omar')); // false
+
+console.log(isValidSlug('new-slug-name-34')); // true
+console.log(isValidSlug('-@)kad>.')); // false
 ```
 
 ## Development
