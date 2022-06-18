@@ -1,7 +1,18 @@
 {
-  "words": ["Elsayed", "parens", "prebuild"],
-  "language": "ar,en",
-  "ignoreRegExpList": ["/[\\u0621-\\u064A]+/"],
-  "ignorePaths": ["node_modules", "lib"],
-  "files": ["./**/*", "./.eslintrc.json"]
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "words": [
+    "commitlint",
+    "Elsayed",
+    "parens",
+    "postversion",
+    "prebuild",
+    "preversion",
+    "tailwindcss",
+    "core"
+  ],
+  "language": "en",
+  "ignoreRegExpList": ["/[ء-ي]+/"],
+  "ignorePaths": ["node_modules", "lib", "dist", "gitignore"],
+  "files": ["**"]
 }

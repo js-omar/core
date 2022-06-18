@@ -1,55 +1,75 @@
 {
   "name": "@js-omar/core",
-  "displayName": "Omar Javascript Core",
+  "displayName": "Core",
+  "description": "Core Project",
   "version": "1.0.1",
-  "description": "my javascript core functions packages",
+  "homepage": "https://github.com/js-omar/core#readme",
+  "keywords": [
+    "javascript"
+  ],
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "prepare": "husky install",
-    "start": "tsc --watch",
-    "prebuild": "rimraf lib",
+    "prepare": "husky install && npm run build",
+    "prepublishOnly": "npm run test:all:ci",
+    "postversion": "git push && git push --tags",
+    "prebuild": "tsc --build --clean",
     "build": "tsc",
-    "test": "jest --ci --maxWorkers=3",
+    "start": "npm run build -- --w",
+    "test": "jest --maxWorkers=3",
     "fix:format": "prettier --write .",
     "fix:lint": "eslint . --ext ts --ext js --fix",
     "check:types": "tsc --pretty --noEmit",
     "check:cspell": "cspell",
     "check:format": "prettier --check .",
     "check:lint": "eslint . --ext ts --ext js",
-    "test:all": "npm run test && npm run check:types && npm run check:cspell && npm run check:format && npm run check:lint"
+    "test:all:ci": "npm run test -- --ci && npm run check:types && npm run check:cspell && npm run check:format && npm run check:lint"
   },
-  "homepage": "https://github.com/js-omar/core#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/js-omar/core.git"
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@js-omar/eslint-config": "^1.5.1",
+    "@types/jest": "^28.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "cspell": "^6.1.2",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.6.4"
   },
-  "keywords": [
-    "javascript"
-  ],
   "author": {
     "name": "Omar Elsayed",
     "email": "challengeromar97@gmail.com",
     "url": "https://ng-omar.com"
   },
-  "license": "MIT",
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": [
+    "https://ng-omar.com/donate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-omar/core.git"
+  },
   "bugs": {
     "url": "https://github.com/js-omar/core/issues"
   },
-  "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "cspell": "^5.19.7",
-    "eslint": "^8.14.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "husky": "^7.0.0",
-    "jest": "^27.5.1",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.4",
-    "typescript": "^4.6.3"
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.4.0"
   }
 }

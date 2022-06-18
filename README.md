@@ -1,6 +1,6 @@
-# Omar Javascript Core
+# Core
 
-my javascript core functions packages
+Core Project
 
 ## Installation
 
