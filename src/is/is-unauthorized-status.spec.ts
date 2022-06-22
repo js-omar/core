@@ -1,4 +1,4 @@
-import { IValidate } from './interfaces/validate.interface';
+import { IValidate } from '../interfaces/validate.interface';
 import { isUnAuthorizedStatus } from './is-unauthorized-status';
 
 test('isUnAuthorizedStatus Function', () => {

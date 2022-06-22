@@ -1,4 +1,4 @@
-import { IValidate } from './interfaces/validate.interface';
+import { IValidate } from '../interfaces/validate.interface';
 import { isValidTokenFormat } from './is-valid-token-format';
 
 test('isValidTokenFormat Function', () => {

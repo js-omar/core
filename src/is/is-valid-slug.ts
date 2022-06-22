@@ -1,4 +1,4 @@
-import { VALID_SLUG_PATTERN } from './regex';
+import { VALID_SLUG_PATTERN } from '../constants/regex';
 
 /**
  * @name isValidSlug

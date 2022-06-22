@@ -1,4 +1,4 @@
-import { IValidate } from './interfaces/validate.interface';
+import { IValidate } from '../interfaces/validate.interface';
 import { getRandInt } from './get-rand-int';
 
 test('getRandInt Function', () => {

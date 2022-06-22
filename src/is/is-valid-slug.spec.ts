@@ -1,4 +1,4 @@
-import { IValidate } from './interfaces/validate.interface';
+import { IValidate } from '../interfaces/validate.interface';
 import { isValidSlug } from './is-valid-slug';
 
 test('isValidSlug Function', () => {
